@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/icon_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ikon"
+
+        />
+
+
+    <TextView
+        android:id="@+id/battery_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/icon_layout"
+        android:text="Kalori Kehidupan"
+        android:textSize="20sp"
+        android:textColor="@color/old_blue"
+        />
+
+
+</LinearLayout>
