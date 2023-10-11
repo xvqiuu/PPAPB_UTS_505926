@@ -1,0 +1,343 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FifthActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar2"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="56dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/headerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Kalori In/Out"
+            android:textSize="35sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/old_blue"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txt_purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Kalori : "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_caltype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:padding="8dp"
+            android:entries="@array/caltyped"
+            android:layout_marginBottom="15dp"
+            />
+
+        <!-- Jika memilih kalori In-->
+        <LinearLayout
+            android:id="@+id/show_typecalin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <!-- Nama Makanan -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Makanan :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_name"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Waktu Makan -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu Makanan :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_time"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Jenis Kalori In -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kalori In    :    "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_typecalin"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/calintype"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Jumlah Kalori -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Kalori     : "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_countcal"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Jika Memilih Kalori Out-->
+        <LinearLayout
+            android:id="@+id/show_typecalout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <!-- Nama Workout -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Workout  : "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_nameworkout"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Waktu Workout Dimulai -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu Workout Dimulai :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_workouttime"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Durasi Workout -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Durasi Workout   :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_workoutduration"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                >
+                <!-- Kalori Terbakar -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kalori Terbakar   :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_burncal"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:hint=" "
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Button Simpan -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:backgroundTint="@color/old_blue"
+            />
+
+        <!-- Tombol Kembali ke Halaman Home -->
+        <Button
+            android:id="@+id/btn_backtohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back To Home"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:backgroundTint="@color/old_blue"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    >
+
+    <Spinner
+        android:id="@+id/spinner_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center"
+        android:entries="@array/day"
+        />
+
+    <ImageView
+        android:id="@+id/calendar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="180dp"
+        android:src="@drawable/baseline_calendar_month_24"
+        android:layout_gravity="center"
+        />
+
+
+    <ImageView
+        android:id="@+id/battery_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/calendar_icon"
+        android:src="@drawable/baseline_search_24"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

@@ -7,6 +7,11 @@ android {
     namespace = "com.example.myapplication"
     compileSdk = 33
 
+    //digunakan untuk memudahkan penulisan kode yang berhubungan dengan tampilan
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.myapplication"
         minSdk = 24

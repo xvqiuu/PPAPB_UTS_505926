@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    //membuat beberapa array string yg didefinisikan di kode sehingga tdk dpt dirubah scr dinamis
+    <array name="unitofweight">
+        <item>Kg</item>
+        <item>g</item>
+    </array>
+
+    <array name="purpose">
+        <item>Pilih disini </item>
+        <item>Cutting</item>
+        <item>Bulking</item>
+        <item>Maintaining</item>
+    </array>
+
+    <array name="day">
+        <item>Hari ini</item>
+        <item>Kemarin</item>
+        <item>Besok</item>
+    </array>
+
+    <array name="calintype">
+        <item>Pilih disini </item>
+        <item>Sarapan</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </array>
+
+    <array name="caltyped">
+        <item>Pilih disini </item>
+        <item>Kalori In</item>
+        <item>Kalori Out</item>
+    </array>
+
 </resources>
