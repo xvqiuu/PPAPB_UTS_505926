@@ -30,16 +30,17 @@
             <!-- Kartu pertama -->
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="170dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/bakso"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <!-- Isi kartu -->
                     <TextView
@@ -65,14 +66,14 @@
             <!-- Kartu kedua -->
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="170dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/nasgor"
                     android:orientation="vertical">
 
@@ -100,14 +101,14 @@
             <!-- Kartu ketiga -->
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="170dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/soto"
                     android:orientation="vertical">
 
@@ -135,14 +136,14 @@
             <!-- Kartu keempat -->
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="170dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/naspad"
                     android:orientation="vertical">
 
@@ -170,14 +171,14 @@
             <!-- Kartu kelima -->
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="170dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/sate"
                     android:orientation="vertical">
 
@@ -206,6 +207,13 @@
 
     </HorizontalScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/old_blue"
+        android:layout_marginTop="20dp"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -220,7 +228,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sisa Kalori         "
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:padding="8dp"
             android:layout_weight="2"
             android:textColor="@color/white"
@@ -235,7 +243,7 @@
             android:padding="8dp"
             android:layout_weight="1"
             android:layout_marginStart="20dp"
-            android:gravity="right"
+            android:gravity="center"
             android:textColor="@color/white"
             android:background="@drawable/border"
             />
@@ -271,7 +279,7 @@
             android:padding="8dp"
             android:layout_weight="1"
             android:layout_marginStart="20dp"
-            android:gravity="right"
+            android:gravity="center"
             android:textColor="@color/white"
             android:background="@drawable/border"
             />
@@ -281,6 +289,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -310,7 +319,7 @@
                         android:layout_margin="10dp"
                         android:text="Rincian Kalori 1"
                         android:textColor="@color/old_blue"
-                        android:textSize="15sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -318,7 +327,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
-                        android:textSize="12sp"
+                        android:textSize="15sp"
                         android:layout_margin="10dp"
                         android:textColor="@color/old_blue"
                         />
@@ -346,7 +355,7 @@
                         android:layout_margin="10dp"
                         android:text="Rincian Kalori 2"
                         android:textColor="@color/old_blue"
-                        android:textSize="15sp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -373,35 +382,11 @@
                         android:layout_margin="10dp"
                         android:text="Rincian Kalori 3"
                         android:textColor="@color/old_blue"
-                        android:textSize="15sp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <!-- Kartu keempat -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="14dp"
-                app:cardElevation="6dp"
-                android:backgroundTint="@color/white"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Rincian Kalori 4"
-                        android:textColor="@color/old_blue"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </ScrollView>
@@ -410,7 +395,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <Button
             android:id="@+id/btn_backk"

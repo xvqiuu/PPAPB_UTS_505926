@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_TARGETMAXCAL
 import com.example.myapplication.databinding.ActivityFifthBinding
 
 class FifthActivity : AppCompatActivity() {
@@ -23,6 +24,7 @@ class FifthActivity : AppCompatActivity() {
         const val EXTRA_WORKOUTTIME = "extra_workouttime"
         const val EXTRA_WORKOUTDURATION = "extra_workoutduration"
         const val EXTRA_BURNCAL = "extra_burncal"
+        const val EXTRA_REMAINCALORY = "extra_remaincalory"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,7 @@ class FifthActivity : AppCompatActivity() {
         caltypedd = resources.getStringArray(R.array.caltyped)
 
         with(binding) {
+
             val adapterCalTyped = ArrayAdapter(
                 this@FifthActivity,
                 android.R.layout.simple_spinner_item,
@@ -76,12 +79,14 @@ class FifthActivity : AppCompatActivity() {
             btnSave.setOnClickListener {
                 val intentToFourthActivity = Intent(this@FifthActivity, FourthActivity::class.java)
 
+                val remaincalory = edittextTarget.text.toString()
+                intentToFourthActivity.putExtra(EXTRA_REMAINCALORY,remaincalory)
                 //Kalori In
                 val foodname = edittextName.text.toString()
-                intentToFourthActivity.putExtra(FifthActivity.EXTRA_FOODNAME, foodname)
+                intentToFourthActivity.putExtra(EXTRA_FOODNAME, foodname)
 
-                val foodtime = edittextTime.text.toString()
-                intentToFourthActivity.putExtra(FifthActivity.EXTRA_FOODTIME, foodtime)
+                val foodtime = edittextFoodtime.text.toString()
+                intentToFourthActivity.putExtra(EXTRA_FOODTIME, foodtime)
 
                 val caltypein = spinnerTypecalin.selectedItem.toString()
                 intentToFourthActivity.putExtra(EXTRA_CALTYPEIN, caltypein)

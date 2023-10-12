@@ -9,6 +9,7 @@ import com.example.myapplication.FifthActivity.Companion.EXTRA_BURNCAL
 import com.example.myapplication.FifthActivity.Companion.EXTRA_CALTYPEIN
 import com.example.myapplication.FifthActivity.Companion.EXTRA_FOODNAME
 import com.example.myapplication.FifthActivity.Companion.EXTRA_FOODTIME
+import com.example.myapplication.FifthActivity.Companion.EXTRA_REMAINCALORY
 import com.example.myapplication.FifthActivity.Companion.EXTRA_TOTALCAL
 import com.example.myapplication.FifthActivity.Companion.EXTRA_WORKOUTDURATION
 import com.example.myapplication.FifthActivity.Companion.EXTRA_WORKOUTNAME
@@ -20,10 +21,10 @@ class FourthActivity : AppCompatActivity() {
     //membuat binding terlebih dahulu
     private lateinit var binding: ActivityFourthBinding
 
-    //buat memanggil activity inout data
+    //buat memanggil activity input data
     private val launcher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            //update txtName dengan alamat dari activity yg ke 3
+
                 result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val data = result.data
@@ -35,10 +36,11 @@ class FourthActivity : AppCompatActivity() {
                 val workouttime = data?.getStringExtra(EXTRA_WORKOUTTIME)
                 val workoutduration = data?.getStringExtra(EXTRA_WORKOUTDURATION)
                 val burncal = data?.getStringExtra(EXTRA_BURNCAL)
+                val remaincalory = data?.getStringExtra((EXTRA_REMAINCALORY))
 
-                binding.detailview.text = "Nama Makanan $foodname pada $foodtime dengan jenis $caltypein dan jumlah $totalcal"
-                binding.detailview.text = "Nama Workout $workoutname pada $workouttime dengan jenis $workoutduration dan jumlah $burncal"
-
+                binding.detailview.text = "Nama makanan $foodname$workoutname, waktu makan $foodtime$workouttime, jenis kalorin In $caltypein$workoutduration, dan jumlah kalori $totalcal$burncal"
+                binding.viewRemaincalory.text = "$remaincalory kkal"
+                binding.viewConsumcalory.text = "$totalcal$burncal kkal"
             }
         }
 
@@ -49,8 +51,11 @@ class FourthActivity : AppCompatActivity() {
         binding = ActivityFourthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         with(binding) {
             detailview.text = " "
+            viewRemaincalory.text = " "
+            viewConsumcalory.text = " "
 
             btnToinput.setOnClickListener {
                 val intent = Intent(this@FourthActivity, FifthActivity::class.java)
@@ -58,9 +63,9 @@ class FourthActivity : AppCompatActivity() {
                 launcher.launch(intent)
             }
             btnBackk.setOnClickListener {
-                val intentBackToSecondActivity =
+                val intentBackToThirdActivity =
                     Intent(this@FourthActivity, ThirdActivity::class.java)
-                startActivity(intentBackToSecondActivity)
+                startActivity(intentBackToThirdActivity)
             }
 
         }

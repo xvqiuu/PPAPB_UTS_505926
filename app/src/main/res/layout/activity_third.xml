@@ -20,7 +20,7 @@
         android:textColor="@color/old_blue"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         />
 
     <TextView
@@ -165,7 +165,7 @@
         android:layout_gravity="center"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
-        android:calendarTextColor="@color/white"
+        android:calendarTextColor="@color/old_blue"
         />
 
     <TextView
@@ -193,7 +193,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/btn_back"
