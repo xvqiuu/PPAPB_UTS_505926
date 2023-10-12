@@ -14,6 +14,11 @@ import com.example.myapplication.FifthActivity.Companion.EXTRA_TOTALCAL
 import com.example.myapplication.FifthActivity.Companion.EXTRA_WORKOUTDURATION
 import com.example.myapplication.FifthActivity.Companion.EXTRA_WORKOUTNAME
 import com.example.myapplication.FifthActivity.Companion.EXTRA_WORKOUTTIME
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_CURRENTWEIGHT
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_NAME
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_TARGETMAXCAL
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_PURPOSE
+import com.example.myapplication.ThirdActivity.Companion.EXTRA_WEIGHTWANT
 import com.example.myapplication.databinding.ActivityFourthBinding
 
 class FourthActivity : AppCompatActivity() {
@@ -36,9 +41,16 @@ class FourthActivity : AppCompatActivity() {
                 val workouttime = data?.getStringExtra(EXTRA_WORKOUTTIME)
                 val workoutduration = data?.getStringExtra(EXTRA_WORKOUTDURATION)
                 val burncal = data?.getStringExtra(EXTRA_BURNCAL)
-                val remaincalory = data?.getStringExtra((EXTRA_REMAINCALORY))
+                val remaincalory = data?.getStringExtra(EXTRA_REMAINCALORY)
 
-                binding.detailview.text = "Nama makanan $foodname$workoutname, waktu makan $foodtime$workouttime, jenis kalorin In $caltypein$workoutduration, dan jumlah kalori $totalcal$burncal"
+                val name = data?.getStringExtra(EXTRA_NAME)
+                val currentweight = data?.getStringExtra(EXTRA_CURRENTWEIGHT)
+                val weightwant = data?.getStringExtra(EXTRA_WEIGHTWANT)
+                val purpose = data?.getStringExtra(EXTRA_PURPOSE)
+                val targetmaxcal = data?.getStringExtra(EXTRA_TARGETMAXCAL)
+
+                binding.detailview.text = "Nama $name, berat badan saat ini $currentweight, berat badan yang diinginkan $weightwant, tujuan $purpose, target kalori maksimal $targetmaxcal."
+                binding.detailview1.text = "Nama makanan $foodname$workoutname, waktu makan $foodtime$workouttime, jenis kalorin In $caltypein$workoutduration, dan jumlah kalori $totalcal$burncal."
                 binding.viewRemaincalory.text = "$remaincalory kkal"
                 binding.viewConsumcalory.text = "$totalcal$burncal kkal"
             }
@@ -54,6 +66,7 @@ class FourthActivity : AppCompatActivity() {
 
         with(binding) {
             detailview.text = " "
+            detailview1.text = " "
             viewRemaincalory.text = " "
             viewConsumcalory.text = " "
 
