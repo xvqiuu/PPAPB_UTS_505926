@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -58,6 +59,7 @@ class ThirdActivity : AppCompatActivity() {
                 val targetmaxcal = inputTargetmaxcal.toString()
                 intentToFourthActivity.putExtra(EXTRA_TARGETMAXCAL,targetmaxcal)
 
+                setResult(Activity.RESULT_OK,intentToFourthActivity)
                 startActivity(intentToFourthActivity)
             }
 

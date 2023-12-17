@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivityLifeCycle"
 
     //membuat binding terlebih dahulu
-    private lateinit var binding : ActivityMainBinding
+    lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
